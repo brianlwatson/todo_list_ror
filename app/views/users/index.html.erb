@@ -1,0 +1,25 @@
+
+<% require_user %>        
+<% if @users.size > 0 %>
+<h2 class="table-header"> Users: </h2>
+
+<table style="width:100%" class="table">
+    <tr>
+        <th style="text-align:left">User</th>
+        <th style="text-align:left">Email Address</th>
+    </tr>
+    <% @users.each do |user| %>
+        <tr>
+            <td class="td_task_user"><%= user.name%></td>
+            <td class="td_task_name"><%= user.email%></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %>
+                <%= link_to 'Show', user_path(user) %> 
+                <%= link_to 'Delete', user_path(user), method: :delete, data: {confirm: "Delete Item?"} %> 
+
+            </td
+        </tr>
+    <% end %>
+</table>
+<% else %>
+<h2> No Users Found! </h2>
+<% end %>

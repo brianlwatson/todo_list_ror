@@ -1,0 +1,13 @@
+<% user_is_author_redirect(@task.user) %>
+<h1>Update Task <%= params[:id] %></h1>
+
+<% if @task.errors.any? %>
+    <ul>
+    <h2>Following Errors Occurred:</h2>
+    <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg%></li>
+    <% end %>
+    </ul>
+<% end %>
+
+<%= render 'form' %>

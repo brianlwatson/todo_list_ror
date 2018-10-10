@@ -1,0 +1,23 @@
+<% require_user %>
+
+<h1>Task Details</h1>
+
+<p>
+    Task Name: <br/>
+    <%= @task.name%>
+</p>
+
+<p>
+    Description: <br/>
+    <%= @task.description%>
+</p>
+
+<p>
+    Estimated Effort: <br/>
+    <%= @task.effort%>
+</p>
+
+<p>
+    Priority (out of 10): <br/>
+    <%= @task.priority%>
+</p>

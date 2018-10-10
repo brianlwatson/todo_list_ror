@@ -1,0 +1,37 @@
+<html>
+    <head>
+    </head>
+
+    <body>        
+        <% if @tasks.size > 0 %>
+            <h2 class="table-header"> Remaining Tasks: </h2>
+            <table style="width:100%" class="table">
+                <tr>
+                    <th style="text-align:left">User</th>
+                    <th style="text-align:left">Task Name</th>
+                    <th style="text-align:left">Description</th>
+                    <th style="text-align:left">Est. Effort</th>
+                    <th style="text-align:left">Priority</th>
+                    <th style="text-align:left">Actions</th>
+                </tr>
+                <% @tasks.each do |task| %>
+                    <tr>
+                        <td class="td_task_user"><%= task.user.name%></td>
+                        <td class="td_task_name"><%= task.name%></td>
+                        <td class="td_task_desc"><%= task.description%></td>
+                        <td class="td_task_eff"><%= task.effort%></td>
+                        <td class="td_task_pri"><%= task.priority%></td>
+                        <td><%= link_to 'Show', task_path(task) %>
+                            <%= link_to 'Edit', edit_task_path(task) %> 
+                            <%= link_to 'Delete', task_path(task), method: :delete, data: {confirm: "Delete Item?"} %> 
+                        </td
+                    </tr>
+                <% end %>
+            </table>
+        <% else %>
+        <h2 class="table-header"> No Tasks Found! </h2>
+        <% end %>
+
+    </body>
+
+</html>

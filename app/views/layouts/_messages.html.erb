@@ -1,0 +1,22 @@
+
+<% if not flash.empty? %>
+    <% if flash[:danger] %>
+    <div class="panel panel-danger">
+    <div class="panel-heading">
+        Error:
+    </div>
+    <% else %>
+    <div class="panel panel-success">
+    <div class="panel-heading">
+        Success:
+    </div>
+    <% end %>
+
+        <% flash.each do |name, msg| %>
+            <ul> 
+            <li> <%= msg %></li>
+            <ul>
+        <% end %>
+    </div>
+
+<% end %>
