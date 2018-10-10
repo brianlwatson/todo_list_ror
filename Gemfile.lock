@@ -41,10 +41,6 @@ GEM
     bcrypt (3.1.12)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.1.3)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (>= 1.12.9, < 2)
-      sass (>= 3.5.2)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -86,8 +82,7 @@ GEM
     multi_json (1.13.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    pg (0.21.0)
-    popper_js (1.14.3)
+    pg (0.20.0)
     rack (1.6.10)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -164,13 +159,12 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap
   bootstrap-sass (~> 3.3.5)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pg (~> 0.20)
+  pg (~> 0.20.0)
   rails (= 4.2.10)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -180,4 +174,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.16.4
+   1.16.6
