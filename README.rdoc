@@ -1,28 +1,28 @@
-== README
+Run instructions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ensure that Ruby and Bundler are installed
 
-Things you may want to cover:
+You can either run within Docker or you can run locally. Running locally will require you have an active and running postgres connection.
 
-* Ruby version
+Preparation
+  bundle install
+  rake db:create
+  rake db:migrate
 
-* System dependencies
+Running Locally:
+  rails server
+  navigate to displayed url (assuming postgres connection is valid on port 5432
+  
+Running in Docker
+  docker-compose build
+  docker-compose up [-d]
+  navigate to port of docker connection
+  [docker-machine ip]:[web container port]
+    the docker-machine ip can be found by `docker-machine ip [name of your docker machine]`
+    the web container port can be found by `docker container ps [port corresponding to the web container]`
+    
+Navigate to browser
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+TODO:
+  Make this prettier
+  Clear local storage upon exiting the tab/window/session
